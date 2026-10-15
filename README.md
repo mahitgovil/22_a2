@@ -124,7 +124,7 @@ Full reasoning is in [`docs/handover_note.md`](docs/handover_note.md). In short:
 ## Submission details
 
 - **GitHub repository:** https://github.com/mahitgovil/22_a2
-- **Final commit hash:** c0a2e713bba1cbb9b4e6514fdbca299c2bd5c0d8
+- **Final commit hash:** 45d3225c6ae88ab9ee253268400d66c4c7c21a10
 - **Demo video (≤ 5 min):** https://tinyurl.com/msbhmfuz
 
 ### Contributions
