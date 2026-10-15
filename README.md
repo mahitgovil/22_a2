@@ -1,6 +1,14 @@
 # GigTask Desk — Assignment 2 (Front End Design)
 
 **Team 22 · Project 5: GigTask** (freelance micro-jobs marketplace)
+
+| Team member | Roll no. |
+|---|---|
+| Mahit Govil | 2026201062 |
+| Aditya Mishra | 2026201014 |
+| Samrath Singh | 2026202004 |
+| Jatin Sharma | 2026202013 |
+
 Inherited from Team 14's Assignment 1 (`ygd06/14_a1`, commit `af2b0039d80bd9f2ccb15deb73fca0a24274838a`).
 
 GigTask Desk is a web app on top of the inherited PostgreSQL + MongoDB database. It covers all four Assignment 1 workflows plus browsing:
@@ -14,7 +22,7 @@ GigTask Desk is a web app on top of the inherited PostgreSQL + MongoDB database.
 | **Map** (Workflow 3) | Workers within 5 km of a selectable job site, list sorted by distance, live updates | MongoDB `$geoNear` on a `2dsphere` index |
 | **Reviews** (Workflow 4) | Rating distribution, top tags, average, latest reviews, a flexible portfolio document | MongoDB `$facet`, `Portfolios` collection |
 
-Screenshots are in [`docs/screenshots/`](docs/screenshots/). Design, users and wireframes: [`docs/design/design.md`](docs/design/design.md).
+Screenshots are in [`docs/screenshots/`](docs/screenshots/). Wireframes are in [`docs/wireframes/`](docs/wireframes/).
 
 ## Run it
 
@@ -72,11 +80,12 @@ Five tests against the seeded PostgreSQL database cover Workflow 1: successful f
 ## Project layout
 
 ```
-22_a1b/
+22_a2/
 ├── README.md
-├── docs/            handover_note.md, api_endpoints.md, design/, screenshots/, viva_notes.md, part_a_readme.md
+├── docs/            handover_note.md, api_endpoints.md, wireframes/, screenshots/, relational_erd.png, mongo_schema_map.json
 ├── sql/             Part A scripts 01–06 + our 07 (lifecycle) and 08 (analytics functions)
 ├── mongo/           Part A scripts + Portfolios collection
+├── performance/     Part A performance work
 ├── data_generation/ seeders (Postgres, Mongo)
 ├── api/             Express server (src/routes, src/db), tests
 ├── web/             React + Vite app (src/screens, src/components)
@@ -97,7 +106,7 @@ Five tests against the seeded PostgreSQL database cover Workflow 1: successful f
 
 ## Assumptions
 
-All Part A assumptions still hold (see [`docs/part_a_readme.md`](docs/part_a_readme.md)). Added for this assignment:
+All Part A assumptions still hold (see the Assignment 1 repository linked above). Added for this assignment:
 
 1. Currency is Indian rupees (₹) and is formatted only in the browser.
 2. “Acting as” a client is a demo switcher, not a login. The selected client is remembered in the browser.
@@ -115,7 +124,7 @@ Full reasoning is in [`docs/handover_note.md`](docs/handover_note.md). In short:
 ## Submission details
 
 - **GitHub repository:** https://github.com/mahitgovil/22_a2
-- **Final commit hash:** `TODO: paste the output of git rev-parse HEAD`
+- **Final commit hash:** 99e1517d6b46ed6ab0e7f083a02ce9c7241f029e
 - **Demo video (≤ 5 min):** https://tinyurl.com/msbhmfuz
 
 ### Contributions
