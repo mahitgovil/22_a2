@@ -42,7 +42,7 @@ We ran every Part A script on a clean PostgreSQL 16 database and seeded it with 
 | `data_generation/postgres_seeder.py` | Refreshes the materialized view at the end. It was created while the tables were empty, so the Analytics summary showed zeros after a fresh seed. |
 | `data_generation/mongo_seeder.py` | Seeds 10,000 `Portfolios` documents with deliberately different shapes. |
 | `.gitignore` | Added `node_modules/`, `dist/`, `.env`. |
-| `README.md` | Replaced for Assignment 2. The original is kept as `docs/part_a_readme.md`. |
+| `README.md` | Replaced for Assignment 2. |
 
 Part A files `01`–`04` and `06` are unchanged.
 

@@ -102,11 +102,11 @@ Five tests against the seeded PostgreSQL database cover Workflow 1: successful f
 | **React + Vite + React Router** | Six screens with shared pieces (tables, pagers, pickers). Vite builds to static files the API can serve from one port. |
 | **Chart.js** | Line and bar charts with accessible text alternatives and no extra dependencies. |
 | **Leaflet + OpenStreetMap tiles** | Free map, no API key. Markers are drawn as vector circles, so no image assets. |
-| **Plain CSS** | One small stylesheet with colour tokens; no UI framework to learn for the viva. |
+| **Plain CSS** | One small stylesheet with colour tokens; no UI framework needed. |
 
 ## Assumptions
 
-All Part A assumptions still hold (see the Assignment 1 repository linked above). Added for this assignment:
+All Part A assumptions still hold (see the inherited Assignment 1 repository named at the top). Added for this assignment:
 
 1. Currency is Indian rupees (₹) and is formatted only in the browser.
 2. “Acting as” a client is a demo switcher, not a login. The selected client is remembered in the browser.
@@ -124,7 +124,7 @@ Full reasoning is in [`docs/handover_note.md`](docs/handover_note.md). In short:
 ## Submission details
 
 - **GitHub repository:** https://github.com/mahitgovil/22_a2
-- **Final commit hash:** 45d3225c6ae88ab9ee253268400d66c4c7c21a10
+- **Final commit hash:** 4a4fa4ac11972a854204d66bc833d9a1e95a42c9
 - **Demo video (≤ 5 min):** https://tinyurl.com/msbhmfuz
 
 ### Contributions
@@ -137,5 +137,3 @@ Each member owns one feature area, from the database to the screen. Part A files
 | Aditya Mishra (2026201014) | Browse, app shell, design system | User personas; shared desktop and phone layout; colour tokens, type, status badges, reusable components, accessibility rules; Browse and detail-page wireframes | `api/src/routes/browse.js` (paginated lists, detail pages); `app.js`, `server.js`, `db/pg.js`; `App.jsx`, `main.jsx`, `api.js`, `hooks.js`, `format.js`, `actor.jsx`; `components/ui.jsx`, `styles.css`, Vite setup; `docs/api_endpoints.md` |
 | Samrath Singh (2026202004) | Workflow 2: analytics and materialized view, deployment | Task flow "Manager checks performance"; Analytics wireframe (summary tiles with last refreshed, moving-average chart, ranking); chart text alternatives | `sql/08_api_analytics.sql`; `mv_refresh_log` and logged refresh in `sql/05`; seeder refreshes the view; `api/src/routes/analytics.js`; `Analytics.jsx`, `components/charts.jsx`; `Dockerfile`, `docker-compose.yml`, `docker/init-postgres.sh` |
 | Jatin Sharma (2026202013) | Workflows 3 and 4: MongoDB map, reviews, portfolios, handover | Task flow "Anyone checks quality"; Map and Reviews wireframes; free-form portfolio document shape | `mongo/` script fixes, `Portfolios` collection and new index; portfolios in `mongo_seeder.py`; `api/src/routes/mongoRoutes.js` (`$geoNear`, `$facet`, portfolios); `db/mongo.js`, `pings.js`, `scripts/pings.js`; `MapScreen.jsx`, `Reviews.jsx`; `docs/handover_note.md` |
-
-
