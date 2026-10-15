@@ -1,4 +1,6 @@
-use gigtask;
+// [Assignment 2 fix] `use` is an interactive shell helper and is not portable
+// in load()ed scripts (it fails in the legacy shell); getSiblingDB always works.
+db = db.getSiblingDB("gigtask");
 
 const jobSite = {
   type: "Point",
