@@ -22,7 +22,7 @@ GigTask Desk is a web app on top of the inherited PostgreSQL + MongoDB database.
 | **Map** (Workflow 3) | Workers within 5 km of a selectable job site, list sorted by distance, live updates | MongoDB `$geoNear` on a `2dsphere` index |
 | **Reviews** (Workflow 4) | Rating distribution, top tags, average, latest reviews, a flexible portfolio document | MongoDB `$facet`, `Portfolios` collection |
 
-Screenshots are in [`docs/screenshots/`](docs/screenshots/). Wireframes are in [`docs/wireframes/`](docs/wireframes/).
+Screenshots are in [`docs/screenshots/`](docs/screenshots/). Users, wireframes and look and feel: [`docs/design/user_descriptions.md`](docs/design/user_descriptions.md).
 
 ## Run it
 
@@ -82,7 +82,7 @@ Five tests against the seeded PostgreSQL database cover Workflow 1: successful f
 ```
 22_a2/
 ├── README.md
-├── docs/            handover_note.md, api_endpoints.md, wireframes/, screenshots/, relational_erd.png, mongo_schema_map.json
+├── docs/            handover_note.md, api_endpoints.md, design/ (user_descriptions.md, wireframes/), screenshots/, relational_erd.png, mongo_schema_map.json
 ├── sql/             Part A scripts 01–06 + our 07 (lifecycle) and 08 (analytics functions)
 ├── mongo/           Part A scripts + Portfolios collection
 ├── performance/     Part A performance work
