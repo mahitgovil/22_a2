@@ -1,0 +1,48 @@
+{
+  "database": "gigtask",
+  "collections": {
+    "GigReviews": {
+      "purpose": "Structured-but-flexible freelancer reviews",
+      "fields": {
+        "freelancer_id": "long",
+        "rating": "int 1..5",
+        "skill_tags": [
+          "string"
+        ],
+        "created_at": "date",
+        "comment": "string"
+      },
+      "indexes": [
+        {
+          "freelancer_id": 1,
+          "created_at": -1
+        },
+        {
+            
+          "rating": 1
+        }
+      ]
+    },
+    "WorkerLocations": {
+      "purpose": "Real-time geospatial worker pings",
+      "fields": {
+        "freelancer_id": "long",
+        "is_available": "boolean",
+        "location": {
+          "type": "GeoJSON Point",
+          "coordinates": "[longitude, latitude]"
+        },
+        "created_at": "date"
+      },
+      "indexes": [
+        {
+          "location": "2dsphere"
+        },
+        {
+          "created_at": 1,
+          "expireAfterSeconds": 7200
+        }
+      ]
+    }
+  }
+}
