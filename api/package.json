@@ -1,0 +1,27 @@
+{
+  "name": "gigtask-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Thin REST API connecting the GigTask web UI to PostgreSQL and MongoDB",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "pings": "node scripts/pings.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "mongodb": "^6.21.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  }
+}
