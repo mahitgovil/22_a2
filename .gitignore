@@ -4,7 +4,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-# Assignment 2
+
 node_modules/
 dist/
 build/
