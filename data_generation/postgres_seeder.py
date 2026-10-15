@@ -129,6 +129,12 @@ def main():
 
             conn.commit()
 
+            # [Assignment 2 addition] The materialized view was created while the
+            # tables were empty, so refresh it now; otherwise the Analytics
+            # summary shows zeros until someone presses "Refresh data".
+            cur.execute("SELECT refresh_freelancer_lifetime_summary()")
+            conn.commit()
+
             cur.execute("SELECT COUNT(*) FROM contracts")
             print("contracts:", cur.fetchone()[0])
             cur.execute("SELECT COUNT(*) FROM wallet_audit_logs")
